@@ -43,12 +43,12 @@ mutter(Kind,Mutter) :- kind(Kind,_,Mutter), geschlecht(Mutter,w).
 
 % Grandmother can be found by finding the mother of the mother
 grossmutter(Person, Grossmutter) :-
-    mutter(Person, Mutter),
-    mutter(Mutter, Grossmutter).
+    mutter(Person,  Mutter),
+    mutter(Mutter,  Grossmutter).
 
 % Siblings can be found by finding the children of the same parents that are not the same person
-geschwister(Person, Geschwister) :-
-    vater(Person, Vater),
+geschwister(Person,   Geschwister) :-
+    vater(Person,     Vater),
     kind(Geschwister, Vater, _),
     Geschwister \= Person.
 
