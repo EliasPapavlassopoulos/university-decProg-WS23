@@ -64,3 +64,6 @@ tante(Person, Tante) :-
     mutter(Person, Mutter),
     geschwister(Mutter, Tante),
     geschlecht(Tante, w).
+
+
+% Jori jetz dabei
