@@ -61,4 +61,4 @@ bruder(Person, Bruder) :-
 tante(Person, Tante) :-
     mutter(Person, Mutter),
     geschwister(Mutter, Tante),
-    geschlecht(Tante, w).
+    geschlecht(Tante, w). 
