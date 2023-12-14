@@ -39,7 +39,7 @@ kind(anna,     claudia,   kim).
 
 vater(Kind,Vater) :- kind(Kind,Vater,_), geschlecht(Vater,m).
 vater(Kind,Vater) :- kind(Kind,_,Vater), geschlecht(Vater,m).
-
+    
 mutter(Kind,Mutter) :- kind(Kind,Mutter,_), geschlecht(Mutter,w).
 mutter(Kind,Mutter) :- kind(Kind,_,Mutter), geschlecht(Mutter,w).
 
@@ -64,6 +64,3 @@ tante(Person, Tante) :-
     mutter(Person, Mutter),
     geschwister(Mutter, Tante),
     geschlecht(Tante, w).
-
-
-% Jori jetz dabei
