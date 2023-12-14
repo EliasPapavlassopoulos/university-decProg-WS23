@@ -18,4 +18,3 @@
 % A = atom ;
 %A = atom.
 % Hier kommt die Lösung A = atom doppelt vor, weil neben p(atom) die Lösung auch durch die zweite Zeile p(X) :- q(X) abgeleitet werden kann. Solche Dopplungen werden verhindert, wenn es zu jeder Lösung nur  einen eindeutigen Pfad gibt.
-
