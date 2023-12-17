@@ -19,28 +19,13 @@
 %A = atom.
 % Hier kommt die Lösung A = atom doppelt vor, weil neben p(atom) die Lösung auch durch die zweite Zeile p(X) :- q(X) abgeleitet werden kann. Solche Dopplungen werden verhindert, wenn es zu jeder Lösung nur  einen eindeutigen Pfad gibt.
 
+% create possible candidates
+candidate(luke).
+candidate(han).
+candidate(mothma).
+candidate(leia).
 
-
-% ABGABE & BEARBEITUNG
-% Candidates
-candidate(luke_skywalker).
-candidate(han_solo).
-candidate(mon_mothma).
-candidate(leia_organa).
-
-% Board positions
-position(vorsitzender).
-position(kassenwart).
-position(sekretär).
-
-% Rules
-valid_board(Board) :-
-    permutation([vorsitzender, kassenwart, sekretär], Board), % Generate all possible board configurations
-    \+ member(vorsitzender, Board), % Solo and Mothma cannot be in the board together
-    \+ member(kassenwart, Board), % Solo cannot be kassenwart if Organa is not vorsitzender
-    \+ member(sekretär, Board), % Mothma cannot be sekretär if Organa is vorsitzender
-    (member(han_solo, Board) -> member(leia_organa, Board) ; true), % Solo is available only if Organa is vorsitzender
-    (member(leia_organa, Board) -> member(luke_skywalker, Board) ; true). % Organa is in the board only if Skywalker is also in the board
-
-% Query
-?- findall(Board, valid_board(Board), Boards).
+% create possible positions
+position(chairman).
+position(treasurer).
+position(secretary).
