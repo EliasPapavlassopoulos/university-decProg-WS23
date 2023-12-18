@@ -29,3 +29,5 @@ candidate(leia).
 position(chairman, Candidate).
 position(treasurer, Candidate).
 position(secretary, Candidate).
+
+% AUFGABE NICHT ABGESCHLOSSEN
