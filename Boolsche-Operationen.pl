@@ -28,11 +28,12 @@ ex3(X,Y,Z,Res) :-
     or(Res4, Z, Res5),
     or(Res3, Res5, Res).
 
+% find all cases of X, Y, Z for wich Res = true
 findall((X, Y, Z), ex1(X, Y, Z, true), List).
 findall((X, Y, Z), ex2(X, Y, Z, true), List).
 findall((X, Y, Z), ex3(X, Y, Z, true), List).
 
-% Cases of X = true, Y = false, Z = true
+% Case when X = true, Y = false, Z = true, Res = ...
 % ex1(true, false, true, true).
 % ex2(true, false, true, true).
 % ex3(true, false, true, true).
