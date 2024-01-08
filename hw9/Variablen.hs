@@ -7,8 +7,6 @@ newtype Rule = Rule VarName
 newtype Prog = Prog VarName
 newtype Goal = Goal VarName
 
-
-
 -- create type class Vars that return all variables in a data type
 class Vars a where
     allVars :: a -> [VarName]
