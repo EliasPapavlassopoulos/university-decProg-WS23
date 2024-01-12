@@ -1,0 +1,29 @@
+cabal-version:      2.4
+name:               deklprog-project
+version:            0.1.0.0
+
+synopsis: Project template for the Prolog interpreter project
+
+author:             Niels Bunkenburg
+maintainer:         nbu@informatik.uni-kiel.de
+
+executable simpl
+    main-is:          Main.hs
+
+    -- Modules included in this executable, other than Main.
+    other-modules: Base.IOHelper,
+                   Base.Type,
+                   Base.Parser,
+                   Pretty,
+                   Rename,
+                   SLD,
+                   Subst,
+                   Unification,
+                   Vars
+
+    -- LANGUAGE extensions used by modules in this package.
+    default-extensions: TemplateHaskell
+    build-depends:    base -any, QuickCheck -any, parsec -any
+    hs-source-dirs:   src
+    default-language: Haskell2010
+    ghc-options: -Wall -Werror -fforce-recomp -Wincomplete-uni-patterns -Wno-type-defaults -Wno-unused-imports -Wno-unused-matches -Wno-missing-home-modules
